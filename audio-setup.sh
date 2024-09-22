@@ -15,4 +15,10 @@ sudo pacman -S --noconfirm --needed lib32-pipewire-jack
 sudo pacman -S --noconfirm --needed pipewire-zeroconf
 sudo pacman -S --noconfirm --needed pipewire-pulse
 
-echo "Reboot now"
+echo
+tput setaf 2
+echo "#########################################################################"
+echo ---  "Reboot now"  ---
+echo "#########################################################################"
+tput sgr0
+echo
