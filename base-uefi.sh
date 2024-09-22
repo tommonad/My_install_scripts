@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
-# hwclock --systohc
-# locale-gen
 # echo "KEYMAP=colemak" > /etc/vconsole.conf
 # echo "127.0.0.1 localhost" >> /etc/hosts
 # echo "::1       localhost" >> /etc/hosts
@@ -11,7 +8,7 @@
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
 
-pacman -S efibootmgr dialog mtools base-devel linux-headers avahi xdg-user-dirs xdg-utils inetutils dnsutils cups alsa-utils pipewire pipewire-pulse pipewire-jack bash-completion openssh rsync reflector acpi acpi_call acpid 
+pacman -S --needed --noconfirm efibootmgr dialog mtools base-devel linux-headers avahi xdg-user-dirs xdg-utils cups bash-completion openssh rsync reflector acpi acpi_call acpid
 
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
@@ -29,9 +26,8 @@ systemctl enable libvirtd
 systemctl enable acpid
 
 useradd -m tom
-echo tom:password | chpasswd
-usermod -aG libvirt ermanno
+echo tom:tulla | chpasswd
+usermod -aG libvirt
 
-# echo "ermanno ALL=(ALL) ALL" >> /etc/sudoers.d/ermanno
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
