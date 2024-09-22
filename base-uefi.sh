@@ -10,13 +10,6 @@
 
 pacman -S --needed --noconfirm efibootmgr dialog mtools base-devel linux-headers avahi xdg-user-dirs xdg-utils cups bash-completion openssh rsync reflector acpi acpi_call acpid
 
-# pacman -S --noconfirm xf86-video-amdgpu
-# pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
-
-# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB #change the directory to /boot/efi is you mounted the EFI partition at /boot/efi
-
-# grub-mkconfig -o /boot/grub/grub.cfg
-
 systemctl enable cups.service
 systemctl enable sshd
 systemctl enable avahi-daemon
@@ -25,8 +18,6 @@ systemctl enable fstrim.timer
 systemctl enable libvirtd
 systemctl enable acpid
 
-useradd -m tom
-echo tom:tulla | chpasswd
 usermod -aG libvirt
 
 
