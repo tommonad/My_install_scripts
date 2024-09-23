@@ -21,11 +21,30 @@ set -e
 #tput setaf 8 = light blue
 ##################################################################################################################
 
+# Install arch packages
+package_file="arch_packages.txt"
+
+# Check if the file exists
+if [ ! -f "$package_file" ]; then
+  echo "Error: File $package_file not found!"
+  exit 1
+fi
+
+# Install the packages listed in the file using pacman
+sudo pacman -S --needed --noconfirm $(cat "$package_file")
+
+
+
+# Check if the file exists
+if [ ! -f "$package_file" ]; then
+  echo "Error: File $package_file not found!"
+  exit 1
+fi
 
 tput setaf 2
 echo
 echo "#########################################################################"
-echo "###                   ---  ---                    ###"
+echo "###                   --- Pacman is up to date ---                    ###"
 echo "#########################################################################"
 tput sgr0
 echo
