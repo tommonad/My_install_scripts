@@ -22,14 +22,11 @@ set -e
 ##################################################################################################################
 
 sudo pacman -S --needed - < arch_packages.txt
-yay -S --needed - < aur_packages.txt
 
 tput setaf 2
 echo
 echo "#########################################################################"
-echo "###              --- Pacman and Aur are up to date ---                ###"
+echo "###              --- Pacman packages are up to date ---               ###"
 echo "#########################################################################"
 tput sgr0
 echo
-
-printf "\e[1;32mDone! you can now reboot.\e[0m\n"
