@@ -20,7 +20,7 @@ set -e
 #tput setaf 7 = gray
 #tput setaf 8 = light blue
 ##################################################################################################################
-
+sudo pacman -Syyu
 sudo pacman -S --needed - < arch_packages.txt
 
 tput setaf 2
