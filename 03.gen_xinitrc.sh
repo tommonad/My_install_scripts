@@ -12,23 +12,7 @@ gen_xinitrc=true
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
-# XSessions and dwm.desktop
-if [[ ! -d /usr/share/xsessions ]]; then
-    sudo mkdir /usr/share/xsessions
-fi
-
-cat > ./temp << "EOF"
-[Desktop Entry]
-Encoding=UTF-8
-Name=Dwm
-Comment=Dynamic window manager
-Exec=dwm
-Icon=dwm
-Type=XSession
-EOF
-sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
-
-# .xprofile
+# ~/.xinitrc
 if [[ $gen_xinitrc = true ]]; then
 cat > ~/xinitrc << EOF
 #!/bin/sh
@@ -52,14 +36,14 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 
-setxkbmap $kbmap
+setxkbmap $kbmap &
 xrandr --output $output1 --mode $resolution --rate 60 --primary --output $output2 --mode $reslution --rate 60 --right-of $output1 &
 /home/tom/.config/suckless/dwm-bar/dwm_bar.sh &
 
 # Random wallpapers
 feh --bg-scale --randomize ~/Wallpapers/* &
 
-[[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap
+[[ -f ~/.config/X11/xmodmap ]] && xmodmap ~/.config/X11/xmodmap &
 xset r rate 180 50 &
 
 # start some nice programs
