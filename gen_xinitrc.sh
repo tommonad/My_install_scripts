@@ -30,7 +30,7 @@ sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
 
 # .xprofile
 if [[ $gen_xinitrc = true ]]; then
-cat > ~/.xinitrc << EOF
+cat > ~/xinitrc << EOF
 #!/bin/sh
 
 # Default programs:
@@ -75,6 +75,6 @@ exec dwm
 EOF
 fi
 
-chmod +x .xinitrc
+chmod +x ~/xinitrc
 
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
