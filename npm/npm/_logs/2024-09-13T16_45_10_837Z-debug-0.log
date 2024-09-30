@@ -1,0 +1,28 @@
+0 verbose cli /usr/bin/node /bin/npm
+1 info using npm@10.8.3
+2 info using node@v22.8.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/tom/.npmrc
+5 silly config load:file:/etc/npmrc
+6 verbose title npm init
+7 verbose argv "init" "--yes" "--scope" "mason"
+8 verbose logfile logs-max:10 dir:/home/tom/.npm/_logs/2024-09-13T16_45_10_837Z-
+9 verbose logfile /home/tom/.npm/_logs/2024-09-13T16_45_10_837Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 silly package data {
+12 silly package data   name: '@mason/typescript-language-server',
+12 silly package data   version: '1.0.0',
+12 silly package data   main: 'index.js',
+12 silly package data   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+12 silly package data   keywords: [],
+12 silly package data   author: '',
+12 silly package data   license: 'ISC',
+12 silly package data   description: ''
+12 silly package data }
+13 verbose cwd /home/tom/.local/share/nvim/mason/staging/typescript-language-server
+14 verbose os Linux 6.10.9-arch1-2
+15 verbose node v22.8.0
+16 verbose npm  v10.8.3
+17 verbose exit 0
+18 info ok

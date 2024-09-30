@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This stops script at the first error used for debuging scripts
-set -e
+# set -e
 ################################################################################
 # Author      : Tom Kearns
 # Github      : https://github.com/tommonad/My_install_scripts
@@ -21,11 +21,9 @@ set -e
 #tput setaf 8 = light blue
 ##################################################################################################################
 
-if [[ $aur_helper = true ]]; then
     cd /tmp
     git clone https://aur.archlinux.org/yay.git
     cd yay/;makepkg -si --noconfirm;cd
-fi
 
 sudo pacman -Syyu
 yay -S --needed - < aur_packages.txt

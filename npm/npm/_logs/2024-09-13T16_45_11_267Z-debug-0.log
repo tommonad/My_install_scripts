@@ -1,0 +1,37 @@
+0 verbose cli /usr/bin/node /bin/npm
+1 info using npm@10.8.3
+2 info using node@v22.8.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/tom/.local/share/nvim/mason/staging/typescript-language-server/.npmrc
+5 silly config load:file:/home/tom/.npmrc
+6 silly config load:file:/etc/npmrc
+7 verbose title npm install typescript-language-server@4.3.3 typescript
+8 verbose argv "install" "typescript-language-server@4.3.3" "typescript"
+9 verbose logfile logs-max:10 dir:/home/tom/.npm/_logs/2024-09-13T16_45_11_267Z-
+10 verbose logfile /home/tom/.npm/_logs/2024-09-13T16_45_11_267Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile start cleaning logs, removing 2 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest typescript-language-server@4.3.3
+16 silly packumentCache full:https://registry.npmjs.org/typescript-language-server cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/typescript-language-server 644ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/typescript-language-server set size:1739595 disposed:false
+19 silly fetch manifest typescript@*
+20 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/typescript 68ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/typescript set size:13207795 disposed:false
+23 silly placeDep ROOT typescript@5.6.2 OK for: @mason/typescript-language-server@1.0.0 want: *
+24 silly placeDep ROOT typescript-language-server@4.3.3 OK for: @mason/typescript-language-server@1.0.0 want: 4.3.3
+25 silly reify moves {}
+26 silly audit bulk request { typescript: [ '5.6.2' ], 'typescript-language-server': [ '4.3.3' ] }
+27 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 186ms
+28 silly audit report {}
+29 silly ADD node_modules/typescript-language-server
+30 silly ADD node_modules/typescript
+31 verbose cwd /home/tom/.local/share/nvim/mason/staging/typescript-language-server
+32 verbose os Linux 6.10.9-arch1-2
+33 verbose node v22.8.0
+34 verbose npm  v10.8.3
+35 verbose exit 0
+36 info ok
