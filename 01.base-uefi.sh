@@ -27,7 +27,6 @@ sudo reflector -c "Belgium,Germany" -a 12 -p https -p http --sort rate --save /e
 sudo pacman -Syyu
 sudo pacman -S --needed --noconfirm xorg efibootmgr dialog mtools base-devel linux-headers avahi xdg-user-dirs xdg-utils openssh rsync reflector
 
-systemctl enable cups.service
 systemctl enable avahi-daemon
 systemctl enable reflector.timer
 systemctl enable fstrim.timer
