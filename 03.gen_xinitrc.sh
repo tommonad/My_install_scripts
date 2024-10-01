@@ -9,9 +9,6 @@ resolution=1920x1080
 # Options
 gen_xinitrc=true
 
-sudo timedatectl set-ntp true
-sudo hwclock --systohc
-
 # ~/.xinitrc
 if [[ $gen_xinitrc = true ]]; then
 cat > ~/xinitrc << EOF
@@ -58,7 +55,5 @@ done
 exec dwm
 EOF
 fi
-
-chmod +x ~/xinitrc
 
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
