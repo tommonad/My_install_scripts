@@ -25,7 +25,6 @@
     git clone https://aur.archlinux.org/yay.git
     cd yay/;makepkg -si --noconfirm;cd
 
-sudo pacman -Syyu
 yay -S --needed - < aur_packages.txt
 
 tput setaf 2
