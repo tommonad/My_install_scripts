@@ -3,7 +3,7 @@
 set -e
 
 sudo pacman -S --noconfirm --needed cups cups-pdf gutenprint ghostscript gsfonts system-config-printer
-sudo systemctl enable cups.socket &&  sudo systemctl start cups.socket
+sudo systemctl enable --now cups.socket
 yay -S --noconfirm --needed brscan4 brother-dcp562dw
 sudo brsaneconfig4 -a name="BrotherScanner" model="DCP-J562DW" ip=192.168.1.105
 
