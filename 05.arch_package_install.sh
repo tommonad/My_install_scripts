@@ -21,7 +21,7 @@ set -e
 #tput setaf 8 = light blue
 ##################################################################################################################
 sudo pacman -Syyu
-sudo pacman -S --needed - < arch_packages.txt
+sudo pacman -S --needed --noconfirm - < arch_packages.txt
 
 tput setaf 2
 echo
