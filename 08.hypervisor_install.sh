@@ -22,27 +22,10 @@ set -e
 ##################################################################################################################
 
 
-sudo pacman -Rdd iptables --noconfirm
-sudo pacman -S --noconfirm --needed iptables-nft
-sudo pacman -S --noconfirm --needed ebtables
-
-sudo pacman -S --noconfirm --needed qemu-full
-sudo pacman -S --noconfirm --needed virt-manager
-sudo pacman -S --noconfirm --needed virt-viewer
-sudo pacman -S --noconfirm --needed dnsmasq
-sudo pacman -S --noconfirm --needed vde2
-sudo pacman -S --noconfirm --needed bridge-utils
-
-#ovmf
-sudo pacman -S --noconfirm --needed edk2-ovmf
-
-sudo pacman -S --noconfirm --needed dmidecode
+sudo pacman -Rdd iptables --noconfirm; sudo pacman -S --noconfirm --needed iptables-nft ebtables qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils edk2-ovmf dmidecode
 
 #starting service
-
-sudo systemctl enable libvirtd.service
-sudo systemctl start libvirtd.service
-
+sudo systemctl enable --now libvirtd.service
 
 # echo -e "options kvm-intel nested=1" | sudo tee -a /etc/modprobe.d/kvm-intel.conf
 
