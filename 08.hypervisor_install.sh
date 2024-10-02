@@ -27,11 +27,8 @@ sudo pacman -Rdd iptables --noconfirm; sudo pacman -S --noconfirm --needed iptab
 #starting service
 sudo systemctl enable --now libvirtd.service
 
-# echo -e "options kvm-intel nested=1" | sudo tee -a /etc/modprobe.d/kvm-intel.conf
-
 user=$(whoami)
-sudo gpasswd -a $user libvirt
-sudo gpasswd -a $user kvm
+sudo usermod -aG libvirt kvm $user
 
 sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
 
