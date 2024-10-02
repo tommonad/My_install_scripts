@@ -7,7 +7,7 @@ cd ~/.config && mkdir suckless && cd suckless
 repos=( "dmenu" "dwm" "st" )
 for repo in ${repos[@]}
 do
-    git clone https://github.com/LukeSmithxyz/$repo
+    git clone https://github.com/tommonad/suckless/$repo
     cd $repo;make;sudo make install;cd ..
 done
 
