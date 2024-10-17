@@ -1,6 +1,6 @@
 #!/bin/bash
 # File created on the 23-05-2021
-set -e
+#set -e
 
 sudo pacman -S --noconfirm --needed cups cups-pdf gutenprint ghostscript gsfonts system-config-printer
 sudo systemctl enable --now cups.socket
